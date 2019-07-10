@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+html {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#fcb045), color-stop(#fd1d1d), to(#833ab4));
+  background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 80px;
+}
+
+.container .todo-container {
+  background-color: #b79891;
+  width: 360px;
+  -webkit-box-shadow: 0 10px 20px #000;
+          box-shadow: 0 10px 20px #000;
+}
+
+.container .todo-container h1 {
+  text-align: center;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.container .todo-container__add {
+  width: 100%;
+}
+
+.container .todo-container__add-input, .container .todo-container__add-input__button {
+  height: 24px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.container .todo-container__add-input {
+  width: calc(100% - 38px);
+  color: #848586;
+  margin-left: 11.5px;
+  margin-bottom: 5px;
+}
+
+.container .todo-container__add-input:focus {
+  outline: none;
+  border: 2px solid red;
+}
+
+.container .todo-container__add-input__button {
+  width: 324px;
+  margin: 0 6px 5px 6px;
+  cursor: pointer;
+}
+
+.container .todo-container__body {
+  width: 335px;
+  margin: 5px auto 15px auto;
+}
+
+.container .todo-container__body .list-group {
+  list-style: none;
+}
+
+.container .todo-container__body .list-group-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}
+
+.container .todo-container__body .list-group-item:hover .delete-todo {
+  opacity: 1;
+}
+
+.container .todo-container__body .list-group-item:nth-child(1n) {
+  background-color: burlywood;
+}
+
+.container .todo-container__body .list-group-item:nth-child(2n) {
+  background-color: aquamarine;
+}
+
+.container .todo-container__body .list-group-item div {
+  width: calc(100% - 18px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .todo-container__body .list-group-item div .input-checkbox {
+  display: none;
+}
+
+.container .todo-container__body .list-group-item div .input-checkbox:checked + .label > .inner-circle::after {
+  opacity: 1;
+}
+
+.container .todo-container__body .list-group-item div .input-checkbox:checked + .label + .task {
+  text-decoration: line-through;
+  color: rgba(34, 32, 32, 0.801);
+}
+
+.container .todo-container__body .list-group-item div .label {
+  cursor: pointer;
+}
+
+.container .todo-container__body .list-group-item div .label .inner-circle,
+.container .todo-container__body .list-group-item div .label .inner-circle::after {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .todo-container__body .list-group-item div .label .inner-circle {
+  height: 18px;
+  width: 18px;
+  border: 3px solid black;
+}
+
+.container .todo-container__body .list-group-item div .label .inner-circle::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-color: #000;
+  opacity: 0;
+}
+
+.container .todo-container__body .list-group-item div .task {
+  margin-left: 8px;
+}
+
+.container .todo-container__body .list-group-item .delete-todo {
+  opacity: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #fff;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=style.css.map */
